@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTonyStark"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/tony_stark_new" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTonyStark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toEndOf="@id/imgTonyStark"
+            android:text="Tony Stark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTonyStarkAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTonyStark"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imgTonyStark"
+            android:text="California"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumberTonyStark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTonyStarkAddress"
+            android:layout_toEndOf="@id/imgTonyStark"
+            android:text="+91123456789"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCap"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/imgTonyStark"
+            android:layout_margin="20dp"
+            android:src="@drawable/captain_america" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCaptainAmerica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgTonyStark"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toEndOf="@id/imgCap"
+            android:text="Captain America"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCaptainAmericaAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCaptainAmerica"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imgCap"
+            android:text="Brooklyn"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumberCaptainAmerica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCaptainAmericaAddress"
+            android:layout_toEndOf="@id/imgCap"
+            android:text="+91123456789"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgHulk"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/imgCap"
+            android:layout_margin="20dp"
+            android:src="@drawable/hulk" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHulk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCap"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toEndOf="@id/imgHulk"
+            android:text="Hulk"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHulkAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHulk"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imgHulk"
+            android:text="Kolkata"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumberHulk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHulkAddress"
+            android:layout_toEndOf="@id/imgHulk"
+            android:text="+91123456789"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgThor"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/imgHulk"
+            android:layout_margin="20dp"
+            android:src="@drawable/thor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvThor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgHulk"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toEndOf="@id/imgThor"
+            android:text="Thor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvThorAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvThor"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imgThor"
+            android:text="Asgard"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumberThor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvThorAddress"
+            android:layout_toEndOf="@id/imgThor"
+            android:text="+91123456789"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBlackWidow"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/imgThor"
+            android:layout_margin="20dp"
+            android:src="@drawable/widow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBlackWidow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgThor"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toEndOf="@id/imgBlackWidow"
+            android:text="Black Widow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBlackWidowAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBlackWidow"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imgBlackWidow"
+            android:text="Volgograd"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumberBlackWidow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBlackWidowAddress"
+            android:layout_toEndOf="@id/imgBlackWidow"
+            android:text="+91123456789"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBlackPanther"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/imgBlackWidow"
+            android:layout_margin="20dp"
+            android:src="@drawable/black_panther" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBlackPanther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgBlackWidow"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toEndOf="@id/imgBlackPanther"
+            android:text="Black Panther"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBlackPantherAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBlackPanther"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imgBlackPanther"
+            android:text="Wakanda"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumberBlackPanther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBlackPantherAddress"
+            android:layout_toEndOf="@id/imgBlackPanther"
+            android:text="+91123456789"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

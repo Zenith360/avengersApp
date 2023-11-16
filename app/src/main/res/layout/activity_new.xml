@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NewActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgAvengersLogo"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/avengers_logo" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgAvengersLogo"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/etPhoneNumber"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:paddingBottom="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPhoneNumber"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/etPassword"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingBottom="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/BtnRed"
+        android:text="@string/log_in"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtForgotPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogIn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="6dp"
+        android:text="@string/forgot_password"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtRegYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:padding="6dp"
+        android:text="@string/register_yourself"
+        android:textSize="16sp" />
+</RelativeLayout>
