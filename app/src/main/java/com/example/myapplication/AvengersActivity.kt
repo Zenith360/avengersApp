@@ -24,10 +24,13 @@ class AvengersActivity : AppCompatActivity() {
         ).show()
 
         btnEnd = findViewById(R.id.btnEnd)
+        etMsg = findViewById(R.id.etMsg)
 
         btnEnd.setOnClickListener{
 
-            val msgToSend : String? = etMsg.text.toString()
+            val msgToSend = etMsg.text.toString() ?: "Ali"
+
+            println(msgToSend)
 
             val intent = Intent(this@AvengersActivity, MessageActivity::class.java)
 
