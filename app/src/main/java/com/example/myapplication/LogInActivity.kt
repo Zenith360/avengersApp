@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
-class NewActivity : AppCompatActivity() {
+class LogInActivity : AppCompatActivity() {
 
     private lateinit var etPhoneNumber: EditText
     private lateinit var etPwd: EditText
@@ -22,7 +22,7 @@ class NewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_new)
+        setContentView(R.layout.activity_login)
 
         title = "Log-In"
 
@@ -36,7 +36,7 @@ class NewActivity : AppCompatActivity() {
             val mobNumber = etPhoneNumber.text.toString()
             val pwd = etPwd.text.toString()
             if (mobNumber == validPhoneNumber && validPasswords.contains(pwd)) {
-                val intent = Intent(this@NewActivity, MainActivity::class.java)
+                val intent = Intent(this@LogInActivity, MainActivity::class.java)
 
                 val avengerName: String = "Welcome " + when (pwd) {
 
@@ -53,7 +53,7 @@ class NewActivity : AppCompatActivity() {
                 startActivity(intent)
             } else {
                 Toast.makeText(
-                    this@NewActivity,
+                    this@LogInActivity,
                     "What the hell is wrong with you bro? try again!",
                     Toast.LENGTH_SHORT
                 ).show()
