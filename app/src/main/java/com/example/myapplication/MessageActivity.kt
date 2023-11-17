@@ -11,6 +11,8 @@ class MessageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_message)
 
+        txtOnlyTxt = findViewById(R.id.txtOnlyTxt)
+
         val msgToBeDisplayed = intent.getStringExtra("msg") ?: "Nothing"
 
         txtOnlyTxt.text = msgToBeDisplayed
