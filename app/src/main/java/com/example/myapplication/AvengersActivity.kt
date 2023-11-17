@@ -17,7 +17,11 @@ class AvengersActivity : AppCompatActivity() {
 
         val welcomeMsg = intent.getStringExtra("Name") ?: "Ali"
 
-        title = "First"
+        Toast.makeText(
+            this@AvengersActivity,
+            "${welcomeMsg}!",
+            Toast.LENGTH_SHORT
+        ).show()
 
         btnEnd.setOnClickListener{
 
@@ -29,11 +33,5 @@ class AvengersActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
-
-        Toast.makeText(
-            this@AvengersActivity,
-            "${welcomeMsg}!",
-            Toast.LENGTH_SHORT
-        ).show()
     }
 }
