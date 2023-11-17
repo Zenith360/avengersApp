@@ -23,6 +23,8 @@ class AvengersActivity : AppCompatActivity() {
             Toast.LENGTH_SHORT
         ).show()
 
+        btnEnd = findViewById(R.id.btnEnd)
+
         btnEnd.setOnClickListener{
 
             val msgToSend : String? = etMsg.text.toString()
