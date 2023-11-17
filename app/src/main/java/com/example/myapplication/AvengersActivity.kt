@@ -13,6 +13,8 @@ class AvengersActivity : AppCompatActivity() {
 
     private lateinit var etMsg: EditText
     private lateinit var btnEnd: Button
+    private lateinit var btnSignOut: Button
+
     private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,7 @@ class AvengersActivity : AppCompatActivity() {
 
         btnEnd = findViewById(R.id.btnEnd)
         etMsg = findViewById(R.id.etMsg)
+        btnSignOut = findViewById(R.id.btnSignOut)
 
         btnEnd.setOnClickListener {
 
@@ -45,5 +48,21 @@ class AvengersActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
+        btnSignOut.setOnClickListener {
+
+            sharedPreferences.edit().clear().apply()
+
+            val intent = Intent(this@AvengersActivity, LogInActivity::class.java)
+
+            startActivity(intent)
+
+            finish()
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        finish()
     }
 }

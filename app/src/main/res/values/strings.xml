@@ -7,4 +7,5 @@
     <string name="register_yourself">Register Yourself</string>
     <string name="boilerplate">boilerplate</string>
     <string name="preference_file_name">avengersCache</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
