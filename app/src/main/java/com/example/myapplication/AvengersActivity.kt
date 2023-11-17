@@ -38,7 +38,7 @@ class AvengersActivity : AppCompatActivity() {
 
         btnEnd.setOnClickListener {
 
-            val msgToSend = etMsg.text.toString() ?: "Ali"
+            val msgToSend = etMsg.text.toString()
 
             println(msgToSend)
 
