@@ -68,8 +68,6 @@ class LogInActivity : AppCompatActivity() {
                 sharedPreferences.edit().putBoolean("Logged_In", true).apply()
                 sharedPreferences.edit().putString("SP_Name", avengerName).apply()
 
-                intent.putExtra("Name", avengerName)
-
                 startActivity(intent)
             } else {
                 Toast.makeText(
