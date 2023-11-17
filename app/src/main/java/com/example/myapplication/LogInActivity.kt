@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -15,14 +17,29 @@ class LogInActivity : AppCompatActivity() {
     private lateinit var btnLogIn: Button
     private lateinit var txtForgotPwd: TextView
     private lateinit var txtRegYou: TextView
-    private val validPasswords = arrayOf("steve", "bruce", "tony", "natasha", "t'challa", "thanos")
 
+    private lateinit var sharedPreferences: SharedPreferences
+    private val validPasswords = arrayOf("steve", "bruce", "tony", "natasha", "t'challa", "thanos")
     private val validPhoneNumber = "0123456789"
 //    private val validPwd = "thanos"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        sharedPreferences =
+            getSharedPreferences(getString(R.string.preference_file_name), Context.MODE_PRIVATE)
+
+        val isLoggedIn = sharedPreferences.getBoolean("Logged_In", false)
+        val welcomeMsg = sharedPreferences.getString("SP_Name", "Welcome Thanos!")
+
         setContentView(R.layout.activity_login)
+
+        val intent = Intent(this@LogInActivity, AvengersActivity::class.java)
+
+        if (isLoggedIn) {
+            startActivity(intent)
+            finish()
+        }
 
         title = "Log-In"
 
@@ -47,6 +64,9 @@ class LogInActivity : AppCompatActivity() {
                     validPasswords[4] -> "Black Panther"
                     else -> "Thanos"
                 }
+
+                sharedPreferences.edit().putBoolean("Logged_In", true).apply()
+                sharedPreferences.edit().putString("SP_Name", avengerName).apply()
 
                 intent.putExtra("Name", avengerName)
 

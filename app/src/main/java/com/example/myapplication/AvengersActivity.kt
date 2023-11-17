@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -9,13 +11,18 @@ import android.widget.Toast
 
 class AvengersActivity : AppCompatActivity() {
 
-    private lateinit var etMsg : EditText
-    private lateinit var btnEnd : Button
+    private lateinit var etMsg: EditText
+    private lateinit var btnEnd: Button
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        sharedPreferences =
+            getSharedPreferences(getString(R.string.preference_file_name), Context.MODE_PRIVATE)
+
         setContentView(R.layout.activity_avengers)
 
-        val welcomeMsg = intent.getStringExtra("Name") ?: "Ali"
+        val welcomeMsg = sharedPreferences.getString("SP_Name", "Welcome!")
 
         Toast.makeText(
             this@AvengersActivity,
@@ -26,7 +33,7 @@ class AvengersActivity : AppCompatActivity() {
         btnEnd = findViewById(R.id.btnEnd)
         etMsg = findViewById(R.id.etMsg)
 
-        btnEnd.setOnClickListener{
+        btnEnd.setOnClickListener {
 
             val msgToSend = etMsg.text.toString() ?: "Ali"
 
