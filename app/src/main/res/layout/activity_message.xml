@@ -14,9 +14,9 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="70dp"
         android:background="@color/white"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>
