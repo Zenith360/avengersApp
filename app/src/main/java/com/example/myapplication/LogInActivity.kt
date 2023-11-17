@@ -72,7 +72,7 @@ class LogInActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(
                     this@LogInActivity,
-                    "What the hell is wrong with you bro? try again!",
+                    "Username: 0123456789 Pwd: thanos (experiment with the pwd)",
                     Toast.LENGTH_SHORT
                 ).show()
                 etPwd.text.clear()
