@@ -15,9 +15,10 @@ class NewActivity : AppCompatActivity() {
     private lateinit var btnLogIn: Button
     private lateinit var txtForgotPwd: TextView
     private lateinit var txtRegYou: TextView
+    private val validPasswords = arrayOf("steve", "bruce", "tony", "natasha", "t'challa", "thanos")
 
     private val validPhoneNumber = "0123456789"
-    private val validPwd = "thanos"
+//    private val validPwd = "thanos"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +35,22 @@ class NewActivity : AppCompatActivity() {
         btnLogIn.setOnClickListener {
             val mobNumber = etPhoneNumber.text.toString()
             val pwd = etPwd.text.toString()
-            if (mobNumber == validPhoneNumber && pwd == validPwd) {
+            if (mobNumber == validPhoneNumber && validPasswords.contains(pwd)) {
                 val intent = Intent(this@NewActivity, MainActivity::class.java)
+
+                val avengerName: String = "Welcome " + when (pwd) {
+
+                    validPasswords[0] -> "Captain America"
+                    validPasswords[1] -> "Hulk"
+                    validPasswords[2] -> "Iron Man"
+                    validPasswords[3] -> "Black Widow"
+                    validPasswords[4] -> "Black Panther"
+                    else -> "Thanos"
+                }
+
+                intent.putExtra("Name", avengerName)
+
                 startActivity(intent)
-                finish()
             } else {
                 Toast.makeText(
                     this@NewActivity,
@@ -49,11 +62,8 @@ class NewActivity : AppCompatActivity() {
         }
     }
 
-    /*
-    override fun onClick(p0: View?) {
-    Toast.makeText(this@NewActivity,
-    "We clicked this button",
-    Toast.LENGTH_LONG).show()
+    override fun onPause() {
+        super.onPause()
+        finish()
     }
-    */
 }
