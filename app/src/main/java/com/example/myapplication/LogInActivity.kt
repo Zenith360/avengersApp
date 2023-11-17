@@ -36,7 +36,7 @@ class LogInActivity : AppCompatActivity() {
             val mobNumber = etPhoneNumber.text.toString()
             val pwd = etPwd.text.toString()
             if (mobNumber == validPhoneNumber && validPasswords.contains(pwd)) {
-                val intent = Intent(this@LogInActivity, MainActivity::class.java)
+                val intent = Intent(this@LogInActivity, AvengersActivity::class.java)
 
                 val avengerName: String = "Welcome " + when (pwd) {
 
