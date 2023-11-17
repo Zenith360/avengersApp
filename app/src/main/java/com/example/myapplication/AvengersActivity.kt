@@ -60,4 +60,9 @@ class AvengersActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    override fun onPause() {
+        super.onPause()
+        etMsg.text.clear()
+    }
 }
